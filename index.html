@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Journal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 🔥 PAGE 1 — START CHALLENGE -->
+    <div id="page1" class="page active">
+        <h1>🚀 Dev Journal</h1>
+
+        <div class="streak-box">
+            🔥 Streak: <span id="streakCount">0</span> days
+        </div>
+
+        <input type="number" id="challengeInput" placeholder="Enter today's challenge number">
+        <button onclick="startChallenge()">Start Challenge</button>
+    </div>
+
+
+    <!-- 🎉 SUCCESS POPUP -->
+    <div id="successPopup" class="popup hidden">
+        <h2>🎉 Well Done!</h2>
+        <button onclick="goToPage2()">Continue</button>
+    </div>
+
+
+    <!-- 📝 PAGE 2 — ADD DESCRIPTION -->
+    <div id="page2" class="page hidden">
+        <h2>📝 Challenge Details</h2>
+
+        <textarea id="descriptionInput" placeholder="Describe the problem you solved..."></textarea>
+
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button onclick="saveEntry()">Save Entry</button>
+    </div>
+
+
+    <!-- 📂 SAVED ENTRIES -->
+    <div id="entriesSection">
+        <h2>📚 Previous Entries</h2>
+        <div id="entriesContainer"></div>
+    </div>
+
+
+    <!-- Your JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
